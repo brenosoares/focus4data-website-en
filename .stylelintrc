@@ -1,10 +1,12 @@
 {
+    "extends": ["stylelint-config-standard-scss"],
     "rules": {
         "block-no-empty": true,
         "color-hex-case": "lower",
         "color-hex-length": "short",
         "color-no-invalid-hex": true,
         "declaration-colon-space-after": "always",
+        "indentation": 4,
         "max-empty-lines": 1
     }
 }
