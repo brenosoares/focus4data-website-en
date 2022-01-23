@@ -4,18 +4,20 @@
   "description": "Focus 4 data business website",
   "main": "index.js",
   "scripts": {
-    "build": "run-p build:*",
     "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
+    "build:html": "posthtml -c posthtml.json",
     "build:images": "imagemin src/images/**/* --out-dir=dist/images",
     "build:js": "webpack --mode=production",
-    "css:scss": "node-sass --output-style compressed -o dist src/scss",
+    "build": "run-s build:*",
+    "clean": "rimraf dist/*",
     "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
-    "css:lint": "stylelint src/scss/*.scss --syntax scss || true",
-    "watch:images": "onchange \"src/images\" -- npm run build:images",
+    "css:lint": "stylelint src/scss/*.scss --syntax scss",
+    "css:scss": "node-sass --output-style compressed -o dist src/scss",
     "serve": "browser-sync start --server \"dist\" --files \"dist\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch:css": "onchange \"src/scss\" -- npm run build:css",
+    "watch:images": "onchange \"src/images\" -- npm run build:images",
     "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "watch:html": "onchange \"src/views\" -- npm run build:html",
     "watch": "run-p serve watch:*"
   },
   "repository": {
@@ -29,12 +31,24 @@
   },
   "homepage": "https://github.com/brenosoares/focus4data-website#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
     "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.7",
     "eslint": "^7.32.0",
     "eslint-loader": "^4.0.2",
     "git-commit-msg-linter": "^4.0.7",
+    "htmlnano": "^2.0.0",
+    "imagemin-cli": "^7.0.0",
     "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",
-    "stylelint": "^14.2.0"
+    "posthtml": "^0.16.5",
+    "posthtml-cli": "^0.10.0",
+    "posthtml-modules": "^0.8.0",
+    "stylelint": "^14.2.0",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.1"
   }
 }
