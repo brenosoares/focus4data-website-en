@@ -21,8 +21,11 @@
   "homepage": "https://github.com/brenosoares/focus4data-website#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.7",
     "git-commit-msg-linter": "^4.0.7",
     "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",
     "stylelint": "^14.2.0"
   }
