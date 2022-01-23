@@ -1,0 +1,19 @@
+{
+  "name": "focus4data",
+  "version": "1.0.0",
+  "description": "Focus 4 data business website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brenosoares/focus4data-website.git"
+  },
+  "author": "Breno Soares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brenosoares/focus4data-website/issues"
+  },
+  "homepage": "https://github.com/brenosoares/focus4data-website#readme"
+}
