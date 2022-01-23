@@ -4,7 +4,8 @@
   "description": "Focus 4 data business website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:scss": "node-sass --output-style compressed -o dist src/scss"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/brenosoares/focus4data-website#readme",
   "devDependencies": {
-    "git-commit-msg-linter": "^4.0.7"
+    "git-commit-msg-linter": "^4.0.7",
+    "node-sass": "^7.0.1"
   }
 }
