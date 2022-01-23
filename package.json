@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css:scss": "node-sass --output-style compressed -o dist src/scss"
+    "css:scss": "node-sass --output-style compressed -o dist src/scss",
+    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+    "build:css": "npm run css:scss && npm run css:autoprefixer"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,9 @@
   },
   "homepage": "https://github.com/brenosoares/focus4data-website#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
     "git-commit-msg-linter": "^4.0.7",
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "postcss-cli": "^9.1.0"
   }
 }
