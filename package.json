@@ -4,10 +4,19 @@
   "description": "Focus 4 data business website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "run-p build:*",
+    "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
+    "build:images": "imagemin src/images/**/* --out-dir=dist/images",
+    "build:js": "webpack --mode=production",
     "css:scss": "node-sass --output-style compressed -o dist src/scss",
     "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
-    "build:css": "npm run css:scss && npm run css:autoprefixer"
+    "css:lint": "stylelint src/scss/*.scss --syntax scss || true",
+    "watch:images": "onchange \"src/images\" -- npm run build:images",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:css": "onchange \"src/scss\" -- npm run build:css",
+    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "watch": "run-p serve watch:*"
   },
   "repository": {
     "type": "git",
@@ -21,12 +30,8 @@
   "homepage": "https://github.com/brenosoares/focus4data-website#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
-    "browser-sync": "^2.27.7",
     "git-commit-msg-linter": "^4.0.7",
-    "imagemin-cli": "^7.0.0",
     "node-sass": "^7.0.1",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",
     "stylelint": "^14.2.0"
   }
