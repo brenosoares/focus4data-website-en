@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/brenosoares/focus4data-website/issues"
   },
-  "homepage": "https://github.com/brenosoares/focus4data-website#readme"
+  "homepage": "https://github.com/brenosoares/focus4data-website#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.0.7"
+  }
 }
