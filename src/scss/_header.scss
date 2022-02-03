@@ -2,7 +2,10 @@
     background-color: #2d3036;
     box-shadow: -1px 1px 3px 0 #202020;
     display: block;
-    position: sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 
     &_content {
         align-items: center;
@@ -31,6 +34,7 @@
 
     nav {
         align-items: center;
+        cursor: pointer;
         display: flex;
         justify-content: flex-end;
         width: 100%;
