@@ -8,12 +8,12 @@ module.exports = {
         rules: [
             {
                 enforce: 'pre',
-                test: /.js$/,
+                test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'eslint-loader'
             },
             {
-            test: /.m?js$/,
+            test: /\.m?js$/,
             exclude: /node_modules/,
             use: {
                 loader: 'babel-loader',
@@ -21,6 +21,7 @@ module.exports = {
                     presets: ['@babel/preset-env']
                 }
             }
-        }]
-    }
+        },
+        ],
+      },
 }

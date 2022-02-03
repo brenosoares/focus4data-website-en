@@ -1,0 +1,49 @@
+.whatdo {
+    border-bottom: 5px solid #e83e66;
+    border-top: 5px solid #e83e66;
+    background-image: url("images/what.png");
+    background-position: center center;
+    background-size: 100%;
+    display: block;
+    padding: 40px 0;
+    width: 100%;
+
+    &_title {
+        display: block;
+        margin-bottom: 50px;
+        width: 100%;
+
+        h2 {
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    .whatdo-content {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .block {
+        background-color: #1d1d1d;
+        max-width: 350px;
+        padding: 25px;
+        width: 40%;
+
+        &:first-child {
+            background-color: #a72e4a;
+            margin-bottom: 70px;
+        }
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        p {
+            letter-spacing: 1px;
+        }
+    }
+}

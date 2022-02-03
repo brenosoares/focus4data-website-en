@@ -1,4 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+@import "header";
+@import "about";
+@import "whatdo";
+@import "tech";
+@import "solutions";
+@import "areas";
+@import "partner";
+
 * {
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Aldrich, sans-serif;
+    font-size: 100%;
+    letter-spacing: 0.5px;
+    list-style: none;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #3c4149;
+    font-size: 16px;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 16px;
+}
+
+h2 {
+    color: #e83e66;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: Prompt, sans-serif;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
 }

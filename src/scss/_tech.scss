@@ -1,0 +1,37 @@
+.tech {
+    display: block;
+    padding: 40px 0;
+    width: 100%;
+
+    .title {
+        display: block;
+        width: 100%;
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    .logos {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+
+        .item {
+            display: block;
+            margin: 35px;
+            max-width: 150px;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            &.square {
+                max-width: 100px;
+            }
+        }
+    }
+}
