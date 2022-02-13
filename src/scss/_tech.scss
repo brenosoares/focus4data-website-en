@@ -24,6 +24,11 @@
             margin: 35px;
             max-width: 150px;
 
+            @media screen and (max-width: 980px) {
+                margin: 15px;
+                max-width: 100px;
+            }
+
             img {
                 display: block;
                 width: 100%;
@@ -32,6 +37,10 @@
             &.square {
                 max-width: 100px;
             }
+        }
+
+        @media screen and (max-width: 980px) {
+            flex-wrap: wrap;
         }
     }
 }

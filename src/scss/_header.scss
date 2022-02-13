@@ -14,6 +14,7 @@
         margin: 0 auto;
         max-width: 1280px;
         padding: 10px 16px;
+        position: relative;
     }
 }
 
@@ -25,12 +26,17 @@
         display: block;
         width: 100%;
     }
+
+    @media screen and (max-width: 980px) {
+        min-width: 200px;
+    }
 }
 
 .navbar {
     display: block;
     flex-grow: 1;
     margin: 0 16px;
+    position: relative;
 
     nav {
         align-items: center;
@@ -59,6 +65,10 @@
                     background-color: #e83e66;
                     transition: all linear 0.3s 0s;
                 }
+            }
+
+            @media screen and (min-width: 980px) and (max-width: 1190px) {
+                font-size: 14px;
             }
         }
     }
@@ -90,5 +100,72 @@
 
     a:hover {
         color: #e83e66;
+    }
+
+    @media screen and (min-width: 980px) and (max-width: 1190px) {
+        font-size: 14px;
+    }
+}
+
+.only-small {
+    display: none;
+
+    @media screen and (max-width: 980px) {
+        display: block;
+    }
+
+    .fa-bars {
+        font-size: 20px;
+    }
+}
+
+.only-big {
+    @media screen and (max-width: 980px) {
+        display: none;
+    }
+}
+
+.navsmall {
+    align-items: flex-end;
+    background-color: #2d3036;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s 0.2s linear;
+    right: 0;
+    z-index: 99;
+
+    .close {
+        cursor: pointer;
+        display: block;
+        padding: 30px 20px;
+    }
+
+    .navbar {
+        nav {
+            align-items: flex-end;
+            flex-flow: column nowrap;
+
+            .item {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .navsmall-align {
+        align-items: center;
+        display: flex;
+        padding: 20px;
+    }
+
+    &.not-open {
+        right: -200px;
+        transition: all 0.3s 0.2s linear;
+    }
+
+    @media screen and (max-width: 980px) {
+        display: flex;
     }
 }

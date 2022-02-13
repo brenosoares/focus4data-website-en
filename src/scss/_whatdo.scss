@@ -25,6 +25,10 @@
         align-items: center;
         display: flex;
         justify-content: center;
+
+        @media screen and (max-width: 980px) {
+            flex-wrap: wrap;
+        }
     }
 
     .block {
@@ -44,6 +48,14 @@
 
         p {
             letter-spacing: 1px;
+        }
+
+        @media screen and (max-width: 980px) {
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: 0;
+            }
         }
     }
 }

@@ -39,11 +39,21 @@
             $("html, body").animate({
                 scrollTop: $(target).offset().top - $("header").outerHeight()
             });
+            
+            if (!$(".navsmall").hasClass("not-open")) {
+                $(".navsmall").toggleClass("not-open");
+            }
 
             // Prevent default scrolling action
             // (I didn't use return false, because it stops event bubbling, too)
             e.preventDefault();
             });
+
+            $(".menuicon").click(function(e) {
+                $(".navsmall").toggleClass("not-open");
+
+                e.preventDefault();
+            })
         });
     </script>
 </body>

@@ -56,6 +56,15 @@
                 text-align: center;
                 width: 100%;
             }
+
+            @media screen and (max-width: 980px) {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 980px) {
+            flex-wrap: wrap;
         }
     }
 }
