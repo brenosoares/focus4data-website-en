@@ -22,11 +22,12 @@
     }
 
     .whatdo-content {
-        align-items: center;
+        align-items: stretch;
         display: flex;
         justify-content: center;
 
         @media screen and (max-width: 980px) {
+            align-items: stretch;
             flex-wrap: wrap;
         }
     }
@@ -35,7 +36,16 @@
         background-color: #1d1d1d;
         max-width: 350px;
         padding: 25px;
-        width: 60%;
+        width: 40%;
+
+        &:first-child {
+            background-color: #a72e4a;
+            margin-bottom: 70px;
+        }
+
+        &:nth-child(2) {
+            margin-top: 30px;
+        }
 
         .title {
             margin-bottom: 20px;
@@ -50,6 +60,10 @@
 
             &:first-child {
                 margin-bottom: 0;
+            }
+
+            &:nth-child(2) {
+                margin-top: 0;
             }
         }
     }
